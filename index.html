@@ -57,7 +57,7 @@
           </ul>
         </div>
         <div class="skill-card">
-          <h3>Product Management</h3>
+          <h3>Product</h3>
           <ul>
             <li>PRD & technical spec writing</li>
             <li>Product roadmapping & prioritisation</li>
@@ -92,71 +92,128 @@
     <!-- PROJECTS -->
     <section id="projects">
       <h2 class="section-label">Recent Work</h2>
-      <div class="projects-grid">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="pm">PM</button>
+        <button class="filter-btn" data-filter="developer">Developer</button>
+        <button class="filter-btn" data-filter="ai-content">AI Contents Creator</button>
+      </div>
+      <div class="projects-list">
 
-        <div class="project-card">
-          <div class="project-img project-img--4"><span>🗂️</span></div>
-          <div class="project-body">
-            <h3>Freelance IT PM — Startup</h3>
-            <p>Acting PM for 1 year: PRDs, sprint planning, stakeholder alignment, cross-team coordination. Used engineering background to write unambiguous specs and flag technical risks early.</p>
-            <div class="project-tags">
-              <span>PRD</span><span>Agile</span><span>Sprint Planning</span><span>Freelance</span>
+        <div class="project-card" data-category="pm developer ai-content">
+          <div class="project-summary">
+            <div class="project-info">
+              <h3>Shopify Extension — AI Fashion Model Generator</h3>
+              <div class="project-tags">
+                <span>Shopify API</span><span>Generative AI</span><span>Node.js</span><span>Image Processing</span><span>React</span><span>IT PM</span>
+              </div>
             </div>
+            <button class="expand-btn" onclick="toggleExpand(this)" title="Show details">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="project-detail">
+            <div class="project-photos">
+              <div class="photo-slide active"><img src="images/shopify-1.jpg" alt="Shopify project screenshot 1" /></div>
+              <div class="photo-slide"><img src="images/shopify-2.jpg" alt="Shopify project screenshot 2" /></div>
+              <div class="photo-slide"><img src="images/shopify-3.jpg" alt="Shopify project screenshot 3" /></div>
+              <button class="photo-prev" onclick="photoMove(this,-1)">&#8249;</button>
+              <button class="photo-next" onclick="photoMove(this,1)">&#8250;</button>
+              <span class="photo-counter"></span>
+            </div>
+            <p>Developed a Shopify app that enables merchants to generate high-quality AI model images for apparel.<br><br>Integrated generative AI APIs to transform clothing-only photos into realistic lifestyle shots, handling complex image processing and seamless Shopify storefront integration.</p>
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-img project-img--3"><span>💡</span></div>
-          <div class="project-body">
-            <h3>Startup Idea Commercialisation</h3>
-            <p>Took a product from hypothesis to business model through Kyunghee University's idea commercialisation programme. Won <strong>Excellence Award</strong> at the SMART ICT Makers Idea Contest.</p>
-            <div class="project-tags">
-              <span>Product Strategy</span><span>Business Model</span><span>🏆 Award</span>
+        <div class="project-card" data-category="pm developer">
+          <div class="project-summary">
+            <div class="project-info">
+              <h3>Freelance IT PM — Hyperlocal Tool Rental Service</h3>
+              <div class="project-tags">
+                <span>Hyperlocal</span><span>Product Management</span><span>Agile</span><span>Geolocation</span><span>MVP</span><span>IT PM</span>
+              </div>
             </div>
+            <button class="expand-btn" onclick="toggleExpand(this)" title="Show details">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="project-detail">
+            <div class="project-photos">
+              <div class="photo-slide active"><img src="images/rental-1.jpg" alt="Tool rental screenshot 1" /></div>
+              <div class="photo-slide"><img src="images/rental-2.jpg" alt="Tool rental screenshot 2" /></div>
+              <div class="photo-slide"><img src="images/rental-3.jpg" alt="Tool rental screenshot 3" /></div>
+              <button class="photo-prev" onclick="photoMove(this,-1)">&#8249;</button>
+              <button class="photo-next" onclick="photoMove(this,1)">&#8250;</button>
+              <span class="photo-counter"></span>
+            </div>
+            <p>Led the end-to-end development of a location-based tool sharing platform.<br><br>Managed the full product lifecycle from PRDs to launch, leveraging my engineering background to optimize geolocation features and define robust technical requirements for real-time inventory tracking.</p>
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-img project-img--2"><span>🗄️</span></div>
-          <div class="project-body">
-            <h3>36TB B2B Data Platform — IRM</h3>
-            <p>Built backend services for a large-scale B2B data platform at medical startup. Led a full Python → Java/Spring migration — defined scope, assessed technical risk, and executed delivery.</p>
-            <div class="project-tags">
-              <span>Java</span><span>Python</span><span>PostgreSQL</span><span>AWS</span><span>Docker</span>
+        <div class="project-card" data-category="developer">
+          <div class="project-summary">
+            <div class="project-info">
+              <h3>Inter-Hospital Medical Information Exchange & Imaging Platform</h3>
+              <div class="project-tags">
+                <span>Java</span><span>Spring</span><span>PostgreSQL</span><span>DICOM</span><span>AWS</span><span>Backend</span><span>DevOps</span>
+              </div>
             </div>
+            <button class="expand-btn" onclick="toggleExpand(this)" title="Show details">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="project-detail">
+            <div class="project-photos">
+              <div class="photo-slide active"><img src="images/hospital-1.jpg" alt="Hospital platform screenshot 1" /></div>
+              <div class="photo-slide"><img src="images/hospital-2.jpg" alt="Hospital platform screenshot 2" /></div>
+              <div class="photo-slide"><img src="images/hospital-3.jpg" alt="Hospital platform screenshot 3" /></div>
+              <button class="photo-prev" onclick="photoMove(this,-1)">&#8249;</button>
+              <button class="photo-next" onclick="photoMove(this,1)">&#8250;</button>
+              <span class="photo-counter"></span>
+            </div>
+            <p>Optimized university hospital imaging servers for a national health exchange project.<br><br>Implemented high-efficiency data compression, reducing storage costs and boosting transmission speed.</p>
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-img project-img--5"><span>☁️</span></div>
-          <div class="project-body">
-            <h3>AWS Infrastructure & CI/CD Setup</h3>
-            <p>Designed and deployed cloud infrastructure on AWS EC2 with Docker at IRM. Established deployment pipelines that cut release friction and gave the product team faster iteration cycles.</p>
-            <div class="project-tags">
-              <span>AWS EC2</span><span>Docker</span><span>Git</span><span>DevOps</span>
+        <div class="project-card no-photo" data-category="developer">
+          <div class="project-summary">
+            <div class="project-info">
+              <h3>Python → Java/Spring Migration</h3>
+              <div class="project-tags">
+                <span>Python</span><span>Java</span><span>Spring</span><span>Backend</span>
+              </div>
             </div>
+            <button class="expand-btn" onclick="toggleExpand(this)" title="Show details">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="project-detail">
+            <p>Drove a full codebase migration from Python to Java/Spring.<br><br>Treated it as a product decision — defined scope, communicated trade-offs to stakeholders, and shipped on time.</p>
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-img project-img--6"><span>🔄</span></div>
-          <div class="project-body">
-            <h3>Python → Java/Spring Migration</h3>
-            <p>Drove a full codebase migration from Python to Java/Spring. Treated it as a product decision — defined scope, communicated trade-offs to stakeholders, and shipped on time.</p>
-            <div class="project-tags">
-              <span>Python</span><span>Java</span><span>Spring</span><span>Technical PM</span>
+        <div class="project-card" data-category="developer">
+          <div class="project-summary">
+            <div class="project-info">
+              <h3>Mercedes-Benz — Booking System</h3>
+              <div class="project-tags">
+                <span>Java</span><span>Spring</span><span>MSSQL</span><span>Fullstack</span>
+              </div>
             </div>
+            <button class="expand-btn" onclick="toggleExpand(this)" title="Show details">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-img project-img--1"><span>🚗</span></div>
-          <div class="project-body">
-            <h3>Hansung Auto — Booking System</h3>
-            <p>Led end-to-end development of a B2B maintenance booking platform at Autobrain. Owned the full lifecycle from architecture to production — primary engineer and de-facto product owner.</p>
-            <div class="project-tags">
-              <span>Java</span><span>Spring</span><span>MSSQL</span><span>Product Ownership</span>
+          <div class="project-detail">
+            <div class="project-photos">
+              <div class="photo-slide active"><img src="images/mercedes-1.jpg" alt="Mercedes booking screenshot 1" /></div>
+              <div class="photo-slide"><img src="images/mercedes-2.jpg" alt="Mercedes booking screenshot 2" /></div>
+              <div class="photo-slide"><img src="images/mercedes-3.jpg" alt="Mercedes booking screenshot 3" /></div>
+              <button class="photo-prev" onclick="photoMove(this,-1)">&#8249;</button>
+              <button class="photo-next" onclick="photoMove(this,1)">&#8250;</button>
+              <span class="photo-counter"></span>
             </div>
+            <p>Led end-to-end development of a B2B maintenance booking platform at Automobile SaaS Solution Company.<br><br>Owned the full lifecycle from architecture to production — main backend engineer and de-facto product owner.</p>
           </div>
         </div>
 
@@ -170,7 +227,7 @@
 
         <div class="timeline-item">
           <div class="timeline-meta">
-            <span class="timeline-date">2024.08 — Present</span>
+            <span class="timeline-date">2024.04 — Present</span>
             <span class="timeline-type">Freelance</span>
           </div>
           <div class="timeline-content">
@@ -271,8 +328,9 @@
     <section id="contact">
       <h2 class="section-label">Contact</h2>
       <div class="contact-box">
-        <p>I'm actively looking for a part-time <strong>Product Manager</strong> role — remote or Seoul-based. If you're building something interesting, let's talk.</p>
-        <a href="mailto:ilpyoyang@gmail.com" class="btn-primary">ilpyoyang@gmail.com</a>
+        <p>Open to full-time and part-time opportunities as a <strong>Product Manager</strong>, <strong>Developer</strong>, or <strong>AI Contents Creator</strong> — remote or Seoul-based. 
+          <br/>If you're building something and need someone who can own the product, ship the code, or bring AI into the workflow, let's talk.</p>
+        <button class="btn-primary" id="copy-email" onclick="copyEmail(this)">lief.ofcl@gmail.com</button>
       </div>
     </section>
 
@@ -283,8 +341,8 @@
     <div class="footer-inner">
       <p>© 2026 Rosie Yang</p>
       <div class="footer-links">
-        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <!-- <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a> -->
       </div>
     </div>
   </footer>
@@ -301,6 +359,62 @@
       });
     }, { rootMargin: '-40% 0px -55% 0px' });
     sections.forEach(s => observer.observe(s));
+
+    // Photo carousels
+    document.querySelectorAll('.project-photos').forEach(panel => {
+      const slides = panel.querySelectorAll('.photo-slide');
+      const counter = panel.querySelector('.photo-counter');
+      let idx = 0;
+      panel._slides = slides;
+      panel._idx = () => idx;
+      panel._go = (n) => {
+        slides[idx].classList.remove('active');
+        idx = (n + slides.length) % slides.length;
+        slides[idx].classList.add('active');
+        counter.textContent = (idx + 1) + ' / ' + slides.length;
+      };
+      counter.textContent = '1 / ' + slides.length;
+      if (slides.length <= 1) {
+        panel.querySelector('.photo-prev').style.display = 'none';
+        panel.querySelector('.photo-next').style.display = 'none';
+        counter.style.display = 'none';
+      }
+    });
+    function photoMove(btn, dir) {
+      const panel = btn.closest('.project-photos');
+      panel._go(panel._idx() + dir);
+    }
+
+    // Copy email
+    function copyEmail(btn) {
+      navigator.clipboard.writeText('ilpyoyang@gmail.com').then(() => {
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.disabled = true;
+        setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 2000);
+      });
+    }
+
+    // Expand list row (accordion)
+    function toggleExpand(btn) {
+      const card = btn.closest('.project-card');
+      const isOpen = card.classList.contains('expanded');
+      document.querySelectorAll('.project-card.expanded').forEach(c => c.classList.remove('expanded'));
+      if (!isOpen) card.classList.add('expanded');
+    }
+
+    // Category filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.project-card').forEach(card => {
+          const cats = card.dataset.category || '';
+          card.style.display = (filter === 'all' || cats.split(' ').includes(filter)) ? '' : 'none';
+        });
+      });
+    });
 
     // Fade in on scroll
     const fadeEls = document.querySelectorAll('.skill-card, .project-card, .timeline-item');
