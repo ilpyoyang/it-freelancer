@@ -299,7 +299,7 @@ section:last-child { border-bottom: none; }
 .project-card.expanded .project-detail { display: flex; }
 .project-photos {
   width: 480px;
-  min-height: 300px;
+  height: 300px;
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
@@ -360,6 +360,18 @@ section:last-child { border-bottom: none; }
   line-height: 1.8;
   align-self: flex-start;
   padding-top: .25rem;
+}
+.desc-line {
+  display: flex;
+  gap: .4rem;
+  align-items: baseline;
+}
+.bullet {
+  color: var(--accent);
+  font-size: 1.2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  line-height: 1.8;
 }
 
 /* ===== TIMELINE ===== */
